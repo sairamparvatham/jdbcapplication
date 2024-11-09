@@ -1,0 +1,18 @@
+package java8features;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
+import java.util.function.Predicate;
+
+public class StreemApi {
+public static void main(String[] args) {
+	List<Double> salaries= Arrays.asList(55000.0,3000.00,59090.00,8990.00);
+	Stream<Double> streem = salaries.stream();
+	Predicate<Double>predicate = (value)->value>=40000;
+	stream
+		  	.filter(Predicate)
+		  	.forEach(System.out::println);
+	
+}
+}

@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class comparigenOf3Num {
+
+	public static void main(String[] args) {
+		int m;
+		int l;
+		int z;
+		Scanner sc = new Scanner(System.in);
+		m=sc.nextInt();
+		l=sc.nextInt();
+		z=sc.nextInt();
+		int max=(m>l) ? m : l;
+		int r= max;
+		int fmax=(r > z) ? max : z;
+		
+		int min=(m<l) ? m : l;
+		int e= min;
+		int fmin=(e < z) ? min : z;
+		System.out.println(fmax);
+		System.out.println(fmin);
+
+	}
+
+}

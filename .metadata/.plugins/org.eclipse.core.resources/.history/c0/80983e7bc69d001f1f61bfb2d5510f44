@@ -1,0 +1,29 @@
+package jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class TransactionMGT {
+public static void main(String[] args) throws ClassNotFoundException, SQLException {
+	String driver,url,user,password;
+	driver="com.mysql.cj.jdbc.Driver";
+	url = "jdbc:mysql://localhost:3306/db123";
+	user = "root";
+	password = "Sairam@1439";
+	String selectQuary ="select * from student where Studentname=?";
+	Scanner sc =new Scanner(System.in);
+	System.out.println("enter the name");
+	String name=sc.next();
+	
+	// loading draiver
+	Class.forName(driver);//loading driver is optional from java 1.6 jdbc 4.8 verssion
+	//establish connection
+	Connection con= DriverManager.getConnection(url,user,password);
+	
+}
+}
